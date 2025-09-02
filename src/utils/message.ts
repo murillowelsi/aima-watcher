@@ -28,7 +28,7 @@ export class MessageStorage {
 export class MessageAnalyzer {
   private readonly dateRegex = /\d{1,2} de \w+ de \d{4}/g;
 
-  extractDates(message: string): string[] {
+  private extractDates(message: string): string[] {
     return message.match(this.dateRegex) || [];
   }
 

@@ -10,6 +10,8 @@ export default defineConfig({
   use: {
     baseURL: 'https://portal-renovacoes.aima.gov.pt',
     locale: 'pt-PT',
+    geolocation: { latitude: 39.3999, longitude: -8.2245 }, // Portugal (center coordinates)
+    permissions: ['geolocation'],
     trace: 'on-first-retry',
   },
 
