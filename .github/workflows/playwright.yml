@@ -16,8 +16,12 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: lts/*
-    - name: Install dependencies
-      run: npm ci
+    - name: Install Portuguese locale
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y locales
+        sudo locale-gen pt_PT.UTF-8
+        sudo update-locale
     - name: Install Playwright Chrome
       run: npx playwright install chromium --with-deps
     - name: Run AIMA Watcher
