@@ -2,10 +2,6 @@ name: AIMA Watcher
 on:
   push:
     branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
-  schedule:
-    - cron: '0 0,4,9,14,19 * * *'
   workflow_dispatch:
 jobs:
   test:
